@@ -14,31 +14,50 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class PlantPlacesController {
 	
 	
+	/**
+	 * Handles the /start GET endpoint
+	 * @return
+	 */
 	@RequestMapping(value="/start", method=RequestMethod.GET)
 	public String read() {
 		
 		return "start";
 	}
 	
+	/**
+	 * Handles the /start GET endpoint with a JSON header
+	 * @return
+	 */
 	@RequestMapping(value="/start", method=RequestMethod.GET, headers = {"content-type=text/json"})
 	public String readJSON() {
 		
 		return "start";
 	}
 	
+	/**
+	 * Handles the /start GET endpoint with a param
+	 * @return
+	 */
 	@RequestMapping(value="/start", method=RequestMethod.GET, params = {"loyalty=blue"})
 	public String readBlue() {
 		
 		return "start";
 	}
 	
+	/**
+	 * Handles the /start GET endpoint with a param
+	 * @return
+	 */
 	@RequestMapping(value="/start", method=RequestMethod.GET, params = {"loyalty=silver"})
 	public String readSilver() {
 		
 		return "start";
 	}
 	
-	
+	/**
+	 * Handles the /start POST endpoint
+	 * @return
+	 */
 	@PostMapping("/start")
 	public String create() {
 		
